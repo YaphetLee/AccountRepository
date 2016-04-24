@@ -22,6 +22,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     private SettingFragment settingFragment;
     private StatisticFragment statisticFragment;
     private android.support.v4.app.FragmentManager mManager;
+    //添加了东西
 
     @Override
     public int setLayout() {
