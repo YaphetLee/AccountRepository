@@ -153,6 +153,8 @@ public class SettingFragment extends Fragment implements View.OnClickListener{
                 categoryBean.setTypeName(category);
                 try {
                     dbManager.save(categoryBean);
+                    Toast.makeText(getActivity(), "类别添加成功", Toast.LENGTH_SHORT).show();
+                    mDialog.dismiss();
                 } catch (DbException e) {
                     e.printStackTrace();
                 }

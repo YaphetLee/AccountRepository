@@ -24,6 +24,11 @@ public class CategoryAdapter extends BaseAdapter{
         this.list_category = list_category;
         this.context = context;
     }
+
+    public void setList_category(List<CategoryBean> list_category){
+        this.list_category  = list_category;
+        notifyDataSetChanged();
+    }
     @Override
     public int getCount() {
         return list_category.size();

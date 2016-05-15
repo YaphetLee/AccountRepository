@@ -42,7 +42,9 @@
                 android:layout_height="45dp"
                 android:layout_weight="4"
                 android:gravity="center"
+                android:textColorHint="#ff0000"
                 android:background="@drawable/bg_password"
+                android:hint="输入金额"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -88,7 +90,7 @@
                 android:layout_height="45dp"
                 android:layout_weight="4"
                 android:background="@drawable/bg_password"
-                android:text="输入时间"
+                android:text="选择时间"
                 android:textColor="#ff0000"
                 android:textSize="15sp" />
         </LinearLayout>
@@ -110,7 +112,9 @@
                 android:layout_width="0dp"
                 android:layout_height="45dp"
                 android:layout_weight="4"
+                android:hint="输入地点"
                 android:gravity="center"
+                android:textColorHint="#ff0000"
                 android:background="@drawable/bg_password"
                 android:textSize="15sp" />
         </LinearLayout>

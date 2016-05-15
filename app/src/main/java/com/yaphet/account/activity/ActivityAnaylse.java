@@ -107,20 +107,28 @@ public class ActivityAnaylse extends BaseActivity implements View.OnClickListene
             if (list_accout_detail.size() > 0) {  //当重新计算消费时，清空上次输入月份的记录
                 list_accout_detail.clear();
             }
+            //清空上月记录
+            if(list_money.size()>0){
+                list_money.clear();
+            }
+            if(list_credit.size()>0){
+                list_credit.clear();
+            }
             sortData(month);
             pieData = gengerData(list_money);
             pieData1 = gengerData(list_credit);
             if (pieData != null) {
                 showChart(pieChart, pieData);
             } else {
+                if(pieData1!=null){
+                    showChart(pieChart1,pieData1);
+                }else{
+                    return;
+                }
                 return;
             }
 
-            if(pieData1!=null){
-                showChart(pieChart1,pieData1);
-            }else{
-                return;
-            }
+
         }
     }
 
@@ -132,14 +140,17 @@ public class ActivityAnaylse extends BaseActivity implements View.OnClickListene
                 AccountBean accountBean = list_account.get(i);
                 if (month.equals(accountBean.getTime().substring(5, 7))) {
                     Log.e("info", "执行到了这里");
-                    list_accout_detail.add(accountBean);   //得到当月的账户表
+                    if(!accountBean.getCategory().equals("收入")) {
+                        list_accout_detail.add(accountBean);   //得到当月的账户表
+                    }
                 } else {
                     continue;
                 }
             }
             for(int i = 0;i<list_accout_detail.size();i++){
                 AccountBean account  = list_accout_detail.get(i);
-                if(account.getPayType().equals("现金支付")){
+                Log.e("info", account.toString()+account.getMoney()+account.getPayType());
+                if("现金支付".equals(account.getPayType())){
                     list_money.add(account);
                 }else if(account.getPayType().equals("信用卡支付")){
                     list_credit.add(account);

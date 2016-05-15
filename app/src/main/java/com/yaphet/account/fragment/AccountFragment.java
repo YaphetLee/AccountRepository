@@ -114,6 +114,8 @@ public class AccountFragment extends Fragment implements View.OnClickListener{
             Log.e("---->>","显示里这里");
             try {
                 list_account = db.selector(AccountBean.class).findAll();
+                list_category = db.selector(CategoryBean.class).findAll();
+                mAdapter.setList_category(list_category);
                 double credit_money = 0;
                 double month_money = 0;
                 double credit_money_last = 0;
