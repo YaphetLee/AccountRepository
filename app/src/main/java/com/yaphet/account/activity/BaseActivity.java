@@ -5,6 +5,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
+import android.widget.Toast;
 
 import org.json.JSONObject;
 
@@ -21,6 +22,9 @@ public abstract class BaseActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         mContext = this;
         setContentView(setLayout());
+        findView();
+        setListener();
+        loadData();
         pd = new ProgressDialog((this));
 
     }
@@ -50,4 +54,9 @@ public abstract class BaseActivity extends FragmentActivity {
     public abstract void findView();
     public abstract void setListener();
     public abstract void loadData();
+
+
+    public void showToast(String str){
+        Toast.makeText(mContext,str, Toast.LENGTH_SHORT).show();
+    }
 }

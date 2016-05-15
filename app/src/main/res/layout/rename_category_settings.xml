@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="#ffffff">
+
+    <TextView
+        android:id="@+id/tv_category_setting"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="#00ffee"
+        android:text="重命名类别"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#000000"/>
+    <EditText
+    android:id="@+id/et_typename"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:hint="输入类别名字"
+    android:gravity="center"
+    android:textColorHint="#00ff00"
+    android:textSize="15sp"/>
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="45dp">
+         <Button
+         android:id="@+id/bt_ok"
+         android:layout_width="0dp"
+         android:layout_height="match_parent"
+         android:layout_weight="1"
+         android:text="OK"/>
+
+         <Button
+             android:id="@+id/bt_cancel"
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="1"
+             android:text="CANCEL"/>
+     </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/activity_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <EditText
+                android:id="@+id/et_month"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:hint="输入月份"/>
+            <Button
+                android:id="@+id/bt_search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="搜索"/>
+        </LinearLayout>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChart"
+            android:layout_width="match_parent"
+            android:layout_height="400dp">
+
+        </com.github.mikephil.charting.charts.PieChart>
+
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChart1"
+            android:layout_width="match_parent"
+            android:layout_height="400dp">
+
+        </com.github.mikephil.charting.charts.PieChart>
+    </LinearLayout>
+
+    </ScrollView>
+<!--    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="#0000ff">
+
+    </FrameLayout>-->
+
+</LinearLayout>

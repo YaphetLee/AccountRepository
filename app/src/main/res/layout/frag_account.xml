@@ -1,10 +1,256 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#770000ff"
+    android:orientation="vertical" >
 
-    <TextView
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="记账"/>
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_count"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/tv_balance"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:text="金额:"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/et_money"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:background="@drawable/bg_password"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="类别:"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btn_category"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="4"
+                android:background="@drawable/bg_password"
+                android:text="选择类别"
+                android:gravity="center"
+                android:textColor="#ff0000"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="时间:"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btn_time"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="4"
+                android:background="@drawable/bg_password"
+                android:text="输入时间"
+                android:textColor="#ff0000"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="地点:"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/et_place"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:background="@drawable/bg_password"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_pay_type"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="支付方式:"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/bt_pay_type"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="4"
+                android:layout_marginTop="3dp"
+                android:text="选择支付方式"
+                android:gravity="center"
+                android:textColor="#ff0000"
+                android:background="@drawable/bg_password"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_jizhang"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_count"
+        android:text="记账" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/bg_count"
+        android:layout_margin="10dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/credit_pay_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="信用卡支出金额"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_credit_pay_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/credit_pay_money"
+            android:layout_marginLeft="10dp"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_credit_pay_money_edu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_credit_pay_money"
+            android:text="/ 0"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/month_pay_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/credit_pay_money"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="本月支出金额"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_month_pay_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/month_pay_money"
+            android:layout_below="@id/tv_credit_pay_money"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_month_pay_money_edu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/tv_credit_pay_money"
+            android:layout_toRightOf="@id/tv_month_pay_money"
+            android:text="/ 0"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_repay_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/month_pay_money"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="本月待还信用卡金额"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/repay_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_month_pay_money"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

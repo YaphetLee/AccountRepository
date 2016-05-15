@@ -4,9 +4,12 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.yaphet.account.R;
 
+
+/**
+ * Created by comeyi on 2015/7/17.
+ */
 public class TitleBuilder {
 
     /**
@@ -99,6 +102,11 @@ public class TitleBuilder {
         return this;
     }
 
+    public TitleBuilder setVisibilty(int flag){
+
+        left_imageview.setVisibility(flag);
+        return this;
+    }
     /**
      * 左边文字按钮
      *
@@ -135,7 +143,7 @@ public class TitleBuilder {
      * right
      */
     /**
-     * 右边图片按钮
+     * 图片按钮
      *
      * @param resId
      * @return
@@ -149,7 +157,7 @@ public class TitleBuilder {
     }
 
     /**
-     * 右边文字按钮
+     * 左边文字按钮
      *
      * @param text
      * @return
@@ -163,7 +171,7 @@ public class TitleBuilder {
     }
 
     /**
-     * 设置右边的事件
+     * 设置左边的事件
      */
     public TitleBuilder setRightTextOrImageListener(View.OnClickListener listener) {
 
